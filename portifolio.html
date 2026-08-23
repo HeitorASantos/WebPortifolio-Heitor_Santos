@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Heitor Santos">
+    <title>Heitor Santos | Portfólio</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portifolio.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">Heitor Santos</a>
+    <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+        <a href="#sobre" class="nav-link" data-i18n="nav_about">Sobre mim</a>
+        <a href="#projetos" class="nav-link" data-i18n="nav_projects">Projetos</a>
+        <a href="#conhecimentos" class="nav-link" data-i18n="nav_skills">Conhecimentos</a>
+        <a href="#contato" class="nav-link" data-i18n="nav_contact">Contato</a>
+    </nav>
+
+    <div class="navbar-right">
+        <div class="social-links">
+            <a href="https://www.instagram.com/heitor_a_santos/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/HeitorASantos" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/heitor-santos-92a6032a8/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <button class="translate-btn" id="translateBtn" title="Alternar idioma">
+            <span class="lang-text" id="langText">PT</span>
+        </button>
+
+        <button class="menu-button" id="menuButton">☰</button>
+    </div>
+</header>
+
+<main>
+
+<section id="home" class="section hero">
+    <div class="hero-content reveal">
+        <span class="section-tag">OLÁ, EU SOU</span>
+        <h1>Heitor <span>Santos</span></h1>
+        <h2>Estudante de Ciência da Computação</h2>
+        <p>
+            Apaixonado por tecnologia, programação e criação de projetos.
+            Gosto de transformar ideias em soluções funcionais e continuar
+            evoluindo através de novos desafios.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projetos" class="button primary">Ver projetos</a>
+            <a href="#contato" class="button secondary">Entrar em contato</a>
+            <a  class="button tertiary" href="seu-curriculo.pdf" target="_blank">Baixar meu CV</a>
+        </div>
+    </div>
+
+    <div class="hero-code reveal">
+        <div class="code-symbol">&lt;/&gt;</div>
+        <span class="code-dot dot-one"></span>
+        <span class="code-dot dot-two"></span>
+        <span class="code-ring"></span>
+    </div>
+</section>
+
+<section id="sobre" class="section about">
+    <div class="section-heading reveal">
+        <span class="section-tag">SOBRE</span>
+        <h2>Mais sobre mim</h2>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-text reveal">
+            <p>
+                Sou estudante de Ciência da Computação e desenvolvedor em formação.
+                Tenho interesse por desenvolvimento web, programação, banco de dados
+                e desenvolvimento de sistemas.
+            </p>
+            <p> 
+                Meu objetivo é colocar meus conhecimentos em prática, construir
+                projetos cada vez melhores e crescer profissionalmente na área
+                de tecnologia.
+            </p>
+
+            <div class="mini-cards">
+                <div class="mini-card">
+                    <strong>🎓</strong>
+                    <span>Estudante</span>
+                    <small>Ciência da Computação</small>
+                </div>
+                <div class="mini-card">
+                    <strong>💻</strong>
+                    <span>Desenvolvimento</span>
+                    <small>Web & Software</small>
+                </div>
+                <div class="mini-card">
+                    <strong>🚀</strong>
+                    <span>Objetivo</span>
+                    <small>Evolução constante</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card reveal">
+            <span class="card-label">INFORMAÇÕES</span>
+            <div class="info-row"><strong>Nome:</strong> Heitor Santos</div>
+            <div class="info-row"><strong>Curso:</strong> Ciência da Computação</div>
+            <div class="info-row"><strong>Localização:</strong> Curitiba, PR</div>
+            <div class="info-row"><strong>Disponibilidade:</strong> Aberto a oportunidades</div>
+        </div>
+    </div>
+</section>
+
+<section id="projetos" class="section projects">
+    <div class="section-heading centered reveal">
+        <span class="section-tag">PROJETOS</span>
+        <h2>Meus trabalhos</h2>
+        <p>Alguns projetos que representam minha evolução na programação.</p>
+    </div>
+
+    <div class="project-carousel">
+        <div class="project-grid" id="projectGrid"></div>
+    </div>
+</section>
+
+<section id="conhecimentos" class="section knowledge">
+    <div class="section-heading centered reveal">
+        <span class="section-tag">CONHECIMENTOS</span>
+        <h2>Tecnologias que utilizo</h2>
+        <p>Algumas das tecnologias e linguagens que venho estudando.</p>
+    </div>
+
+    <div class="knowledge-columns">
+        <div class="knowledge-group reveal">
+            <h3>Linguagens</h3>
+            <div class="knowledge-list" id="languagesList"></div>
+        </div>
+
+        <div class="knowledge-group reveal">
+            <h3>Ferramentas</h3>
+            <div class="knowledge-list" id="toolsList"></div>
+        </div>
+
+        <div class="knowledge-group reveal">
+            <h3>Sistemas Operacionais</h3>
+            <div class="knowledge-list" id="systemsList"></div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="section contact">
+    <div class="section-heading centered reveal">
+        <span class="section-tag">CONTATO</span>
+        <h2>Vamos trabalhar juntos?</h2>
+        <p>Estou aberto a novas oportunidades, projetos e experiências.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+        <a href="mailto:heitorsantos0506@gmail.com" class="contact-card">
+            <span class="contact-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </span>
+            <div>
+                <strong>E-mail</strong>
+                <small>Contate-me por email</small>
+            </div>
+        </a>
+
+        <a href="https://github.com/HeitorASantos" target="_blank" class="contact-card">
+            <span class="contact-icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <div>
+                <strong>GitHub</strong>
+                <small>Encontre-me no GitHub</small>
+            </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/heitor-santos-92a6032a8/" target="_blank" class="contact-card">
+            <span class="contact-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+            <div>
+                <strong>LinkedIn</strong>
+                <small>Encontre-me no LinkedIn</small>
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/heitor_a_santos/" target="_blank" class="contact-card">
+            <span class="contact-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+            <div>
+                <strong>Instagram</strong>
+                <small>Encontre-me no Instagram</small>
+            </div>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© <span id="year"></span> Heitor Santos. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Elemento de Tradução Oculto -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,es',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="portifolio.js"></script>
+</body>
+</html>
