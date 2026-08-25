@@ -253,7 +253,6 @@ if (carousel) {
 
     carousel.addEventListener("pointerdown", event => {
 
-        // Ignora botões/outros elementos que não sejam o carrossel
         if (event.target.closest("button")) return;
 
         dragging = true;
